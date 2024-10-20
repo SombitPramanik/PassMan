@@ -1,1 +1,1 @@
-# PassMan
+# Open Source Password Manager OpenPassMen
