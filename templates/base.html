@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/root.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+    
+    <!-- Block for adding custom CSS from child templates -->
+    {% block extra_css %}
+    <!-- Child templates can add their own CSS here -->
+    {% endblock %}
+
+    <link rel="manifest" href="{{ url_for('static', filename='manifest.json') }}" />
+    <link rel="shortcut icon" href="{{ url_for('static', filename='APP_Logo_Dark_Transparent.png') }}" type="image/x-icon">
+    <title>{% block title %}OpenPassMen -- Secure Self Hosted Password Manager{% endblock %}</title>
+
+    <script src="{{ url_for('static', filename='js/service-worker.js') }}"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="/" class="Logo">
+                <img src="static/APP_Logo_192.png" alt="PassMen" class="Logo" width="55">
+                <span>OpenPassMen</span>
+            </a>
+            
+            <div class="NavItems">
+                <a href="#Home">Home</a>
+                <a href="#Doc">Documentation</a>
+                <a href="#Docker">Docker</a>                
+            </div>
+            <a target="_blank" href="https://github.com/SombitPramanik/PassMen" class="Github"> Get it on <img src="static/github-mark-white.svg" width="25" alt="Github"></a>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}
+        <!-- Child templates will extend the content here -->
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>© 2024 OpenPassMen. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Block for adding custom JavaScript from child templates -->
+    {% block extra_js %}
+    <!-- Child templates can add their own JS here -->
+    {% endblock %}
+</body>
+
+</html>
