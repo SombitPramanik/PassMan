@@ -1,0 +1,84 @@
+:root {
+    --BackgroundColor: rgb(31, 31, 31);
+    --MostDarkBackground: rgb(15, 14, 14);
+    --MediumDarkBackground: rgb(22, 22, 23);
+    --LightDarkBackground: rgb(46, 47, 47);
+    --PrimaryTextColor: rgb(255, 254, 254);
+    --SecondaryTextColor: rgb(206, 4, 4);
+    --HoverTextColor: rgb(153, 152, 153);
+    --DefaultBorderRadios: 10px;
+    --BeautifulDropShadow: 0 0 10px rgba(0, 255, 0, 0.5), 0 0 20px rgba(0, 255, 0, 0.5), 0 0 30px rgba(0, 255, 0, 0.5);
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    color: var(--PrimaryTextColor);
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background: var(--BackgroundColor);
+}
+
+nav {
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Logo {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-left: 1vw;
+
+}
+
+.NavItems {
+    display: flex;
+    justify-content: space-evenly;
+    width: 50vw;
+    border-bottom: 2px solid var(--SecondaryTextColor);
+    height: 50px;
+
+}
+.NavItems a{
+    height: max-content;
+    padding: 10px 10px;
+    border-radius: var(--DefaultBorderRadios);
+    transition: 0.4s ease-in-out;
+}
+
+.Github {
+    width: max-content;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-right: 1vw;
+    padding: 10px 10px;
+    border-radius: var(--DefaultBorderRadios);
+    transition: 0.4s ease-in-out;
+}
+
+.Github:hover ,.NavItems a:hover{
+    transition: 0.4s ease-in-out;
+    background: var(--LightDarkBackground);
+    box-shadow: var(--BeautifulDropShadow);
+}
+
+.Github img {
+    margin-left: 10px;
+}
+
+footer {
+    margin: 5vh 0;
+    text-align: center;
+}
