@@ -79,7 +79,7 @@
     height: 80%;
     background: url('/static/SliderImages/Image1.jpg');
     background-repeat: no-repeat;
-    background-size:cover;
+    background-size: cover;
     background-position: center;
     border-radius: var(--DefaultBorderRadios);
     box-shadow: var(--DefaultDropShadow);
@@ -133,19 +133,23 @@
     align-items: center;
 }
 
-.TagLine1{
+.TagLine1 {
     background: var(--MediumDarkBackground);
 }
-.TagLine2{
-    background: var(--HoverTextColor) ;
+
+.TagLine2 {
+    background: var(--HoverTextColor);
 }
-.TagLine3{
+
+.TagLine3 {
     background: var(--LightDarkBackground);
 }
-.TagLine4{
+
+.TagLine4 {
 
     background: var(--MostDarkBackground);
 }
+
 @media screen and (max-width: 700px) {
     .TagLineContainer {
 
@@ -182,11 +186,13 @@
     justify-content: center;
     height: max-content;
 }
-.TextArea{
+
+.TextArea {
     display: flex;
     flex-direction: row-reverse;
     flex-wrap: nowrap;
 }
+
 .TextArea a {
     transition: 0.5s ease;
     padding: 10px 20px;
@@ -208,7 +214,8 @@
 .Text {
     display: inline-block;
 }
-.Text h2{
+
+.Text h2 {
     font-size: 32px;
     font-weight: 700;
 }
@@ -216,19 +223,21 @@
 .Area {
     background: url('/static/BlockImages/Trident.svg');
     background-repeat: no-repeat;
-    background-size:contain;
+    background-size: contain;
     background-position: center;
     width: 50vw;
     height: 60vh;
 
 }
-.Stats{
+
+.Stats {
     /* outline: 2px solid gray; */
     display: flex;
     margin-top: 50px;
     justify-content: space-evenly;
 }
-.StatsHade{
+
+.StatsHade {
     text-align: center;
     padding: 10px;
     margin: 10px;
@@ -236,52 +245,61 @@
     color: var(--PrimaryTextColor);
     font-weight: 700;
 }
-.mid>.StatsHade{
+
+.mid>.StatsHade {
     background: yellow;
     color: var(--MediumDarkBackground);
 }
-.right>.StatsHade{
+
+.right>.StatsHade {
     background: green;
 }
-ul li{
+
+ul li {
     list-style-type: none;
     padding: 10px;
     margin: 10px;
     border: 2px solid var(--HoverTextColor);
     border-radius: 5px;
 }
+
 /* Block 4 */
-.block4{
+.block4 {
     outline: none;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.installerHed{
+
+.installerHed {
     display: block;
     height: 100%;
     max-width: 38%;
 }
-.installerHed h2{
+
+.installerHed h2 {
     font-size: 32px;
 }
-.docker-compose{
+
+.docker-compose {
     border: 2px solid var(--MostDarkBackground);
     width: 60%;
     height: 80%;
     border-radius: var(--DefaultBorderRadios);
 }
-.ComposeHead{
+
+.ComposeHead {
     align-items: center;
     justify-content: right;
     display: flex;
     /* outline: 2px solid var(--MediumDarkBackground); */
-    border-radius: var(--DefaultBorderRadios) var(--DefaultBorderRadios) 0 0 ;
+    border-radius: var(--DefaultBorderRadios) var(--DefaultBorderRadios) 0 0;
     background: var(--LightDarkBackground);
     height: 10%;
 }
-#CopyBtn{
+
+#CopyBtn {
     cursor: pointer;
     border: 2px solid var(--MostDarkBackground);
     margin-right: 50px;
@@ -289,9 +307,103 @@ ul li{
     border-radius: var(--DefaultBorderRadios);
     transition: 0.5s ease;
 }
-#CopyBtn:hover{
+
+#CopyBtn:hover {
     background: var(--MediumDarkBackground);
 }
-.ComposeBody{
+
+.ComposeBody {
     padding: 20px 25px;
+}
+
+/* Block 5 */
+.block5 {
+    outline: none;
+    display: flex;
+    align-items: start;
+    flex-direction: row-reverse;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+}
+
+.dfdImage {
+    width: 65%;
+    margin: 5px 20px;
+    height: 100%;
+    background: url('/static/icons/DFD.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.securityPera {
+    padding: 10px;
+}
+
+.securityPera h2 {
+    font-weight: 600;
+    font-size: 48px;
+
+}
+
+/* Block 6 */
+.block6 h2 {
+    font-size: 48px;
+    font-style: italic;
+    font-weight: 700;
+    text-align: center;
+}
+
+.block6 {
+    outline: none;
+}
+
+.unforgettableStorageBody{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.unforgettableStorageBody div{
+    margin-top: 60px;
+    width: 30%;
+    height: 301px;
+}
+.storageLeft{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.storageLeft p{
+    text-align: center;
+    line-height: 24px;
+    max-width: 30%;
+}
+.storageMid{
+    border-radius: var(--DefaultBorderRadios);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--MediumDarkBackground);
+    padding: 20px;
+    text-align: center;
+}
+.storageRight{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.Disk1,.Disk2{
+    text-align: center;
+    background: url('/static/icons/HDD.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+/* Block 7 */
+.block7{
+    display: flex;
+    justify-content: center;
+    outline: none;
+    width: 80vw;
+    height: 80vh;
 }
