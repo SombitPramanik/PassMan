@@ -1,0 +1,297 @@
+#Home {
+    padding-top: 10vh;
+}
+
+.Headline {
+    margin-top: 15vh;
+    /* outline: 2px solid red; */
+    display: block;
+    justify-content: center;
+    text-align: center;
+    font-weight: 800;
+    font-size: 48px;
+}
+
+.Headline h2 span:nth-child(1) {
+    color: var(--SecondaryTextColor);
+
+}
+
+.Headline h2 {
+    text-transform: uppercase;
+    color: green;
+
+}
+
+.HeadArticle {
+    padding: 5vw;
+    margin: 5px 10vw;
+    text-align: center;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    line-break: loose;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        scale: 0.5;
+    }
+
+    to {
+        opacity: 1;
+        scale: 1;
+
+    }
+}
+
+.animationView {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.block {
+    outline: 2px solid red;
+    width: 90vw;
+    height: 80vh;
+    margin: 2vh 0;
+    padding-top: 10vh;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+/* Block 1 */
+.block1 {
+    height: 95vh;
+    display: flex;
+    outline: none;
+    justify-content: center;
+    align-items: center;
+}
+
+#imgContainer {
+    outline: 2px solid var(--HoverTextColor);
+    width: 80%;
+    height: 80%;
+    background: url('/static/SliderImages/Image1.jpg');
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+    border-radius: var(--DefaultBorderRadios);
+    box-shadow: var(--DefaultDropShadow);
+    transition: all;
+
+}
+
+.TextContainer {
+    margin: 20px;
+    padding: 5px;
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 80%;
+    flex-wrap: nowrap;
+    text-align: center;
+}
+
+.Topics {
+    border-right: 2px solid;
+    padding: 10px;
+    cursor: pointer;
+    margin: 2px 5px;
+
+}
+
+.Topics:nth-last-child(1) {
+    border: none;
+}
+
+/* Block 2 */
+.block2 {
+    outline: none;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    height: max-content;
+}
+
+.block2>h2 {
+    display: inline-block;
+    text-align: center;
+    font-size: 48px;
+
+}
+
+.TagLineContainer {
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.TagLine1{
+    background: var(--MediumDarkBackground);
+}
+.TagLine2{
+    background: var(--HoverTextColor) ;
+}
+.TagLine3{
+    background: var(--LightDarkBackground);
+}
+.TagLine4{
+
+    background: var(--MostDarkBackground);
+}
+@media screen and (max-width: 700px) {
+    .TagLineContainer {
+
+        flex-wrap: wrap;
+    }
+}
+
+.TagLine {
+    /* margin: 10px; */
+    padding-top: 15px;
+    padding: 15px 20px;
+    width: 30%;
+    height: 400px;
+    text-align: center;
+
+}
+
+.TagLine h2 {
+    text-align: center;
+    margin: 2px 0 15px 0;
+}
+
+.TagLine p {
+    margin-top: 25px;
+    line-break: strict;
+    line-height: 24px;
+}
+
+/* Block 3 */
+.block3 {
+    outline: none;
+    border: none;
+    display: flex;
+    justify-content: center;
+    height: max-content;
+}
+.TextArea{
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: nowrap;
+}
+.TextArea a {
+    transition: 0.5s ease;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--MediumDarkBackground);
+    border: 2px solid var(--PrimaryTextColor);
+    border-radius: var(--DefaultBorderRadios);
+    background: var(--PrimaryTextColor);
+}
+
+.TextArea a:hover {
+    transition: 0.5s ease;
+    background: var(--SecondaryTextColor);
+    border: 2px solid var(--MediumDarkBackground);
+    color: var(--PrimaryTextColor);
+}
+
+.Text {
+    display: inline-block;
+}
+.Text h2{
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.Area {
+    background: url('/static/BlockImages/Trident.svg');
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position: center;
+    width: 50vw;
+    height: 60vh;
+
+}
+.Stats{
+    /* outline: 2px solid gray; */
+    display: flex;
+    margin-top: 50px;
+    justify-content: space-evenly;
+}
+.StatsHade{
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+    background: var(--SecondaryTextColor);
+    color: var(--PrimaryTextColor);
+    font-weight: 700;
+}
+.mid>.StatsHade{
+    background: yellow;
+    color: var(--MediumDarkBackground);
+}
+.right>.StatsHade{
+    background: green;
+}
+ul li{
+    list-style-type: none;
+    padding: 10px;
+    margin: 10px;
+    border: 2px solid var(--HoverTextColor);
+    border-radius: 5px;
+}
+/* Block 4 */
+.block4{
+    outline: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.installerHed{
+    display: block;
+    height: 100%;
+    max-width: 38%;
+}
+.installerHed h2{
+    font-size: 32px;
+}
+.docker-compose{
+    border: 2px solid var(--MostDarkBackground);
+    width: 60%;
+    height: 80%;
+    border-radius: var(--DefaultBorderRadios);
+}
+.ComposeHead{
+    align-items: center;
+    justify-content: right;
+    display: flex;
+    /* outline: 2px solid var(--MediumDarkBackground); */
+    border-radius: var(--DefaultBorderRadios) var(--DefaultBorderRadios) 0 0 ;
+    background: var(--LightDarkBackground);
+    height: 10%;
+}
+#CopyBtn{
+    cursor: pointer;
+    border: 2px solid var(--MostDarkBackground);
+    margin-right: 50px;
+    padding: 10px 15px;
+    border-radius: var(--DefaultBorderRadios);
+    transition: 0.5s ease;
+}
+#CopyBtn:hover{
+    background: var(--MediumDarkBackground);
+}
+.ComposeBody{
+    padding: 20px 25px;
+}
