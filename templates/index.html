@@ -1,0 +1,256 @@
+{% extends "base.html" %}
+
+{% block title %}
+Dashboard - OpenPassMen
+{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+{% endblock %}
+
+{% block content %}
+<section id="Home">
+    <div class="Headline">
+        <h1>Privacy First, Self Hosted, Fully Open Source</h1><br>
+        <h2><span>password</span> manager</h2>
+    </div>
+    <div class="HeadArticle">
+        In 2021 alone, more than 5.9 billion records were exposed due to data breaches. Major companies like Facebook
+        (533 million accounts), LinkedIn (700 million users), and Yahoo (3 billion accounts in 2017) have all had
+        massive breaches, compromising sensitive user data. The risk is real, and no company, big or small, is immune.
+        <br><br>
+
+        For me and my family's security, I choose not to trust them. Instead, I've created an open-source solution, not
+        just for myself, but for anyone who values their privacy above all else. I hope this product helps many to stay
+        secure. <br>
+    </div>
+    <p style="text-align: center;justify-content:center;display:flex;flex-direction:column;">Just Scroll and See our
+        Features <img src="static/icons/downIcon.svg" alt="Scroll Down"></p>
+    <div class="animationView">
+        <div class="block block1">
+            <div id="imgContainer"></div>
+            <div class="TextContainer">
+                <span class="Topics" onclick="setBackgroundImage('imgContainer','static/SliderImages/Image1.jpg')"
+                    id="Topic1">Access From anywhere with a Domain</span>
+                <span class="Topics" onclick="setBackgroundImage('imgContainer','static/SliderImages/Image2.jpg')"
+                    id="Topic2">Build it Default SSL support</span>
+                <span class="Topics" onclick="setBackgroundImage('imgContainer','static/SliderImages/Image3.jpg')"
+                    id="Topic3">Robust State-of-Art Cryptography base Encryption</span>
+                <span class="Topics" onclick="setBackgroundImage('imgContainer','static/SliderImages/Image4.jpg')"
+                    id="Topic4">Server & client Booth Way Encryption </span>
+                <span class="Topics" onclick="setBackgroundImage('imgContainer','static/SliderImages/Image5.jpg')"
+                    id="Topic5">T-PIN support on Client Side</span>
+            </div>
+        </div>
+        <div class="block block2">
+            <h2>What makes <span style="color: red;">OpenPassMen</span> different?</h2>
+            <div class="TagLineContainer">
+                <div class="TagLine TagLine1">
+                    <h2>Privacy</h2>
+                    <p>There's no better method to ensure your privacy is protected than to host it behind your
+                        firewalls or in an air-gapped environment where you have full control. <br>
+                        OpenPassMen is 100% open source, allowing transparency and letting anyone
+                        audit the code.
+                    </p>
+                </div>
+                <div class="TagLine TagLine2">
+                    <h2>Built By Open Source for Open Source </h2>
+                    <p>All sensitive data is cryptographically encrypted before being stored, and you can decrypt them
+                        later using your secure decryption key.
+                    </p>
+                </div>
+                <div class="TagLine TagLine3">
+                    <h2>Z-Grade Security on Own Infrastructure </h2>
+                    <p>
+                        We understand that in a home lab environment, it's often difficult to properly maintain hard
+                        drive health and RAID systems. While we strongly recommend using the ZFS file system with at
+                        least a RAID Mirrored configuration, so we've implemented a dual storage system: one in a MySQL
+                        database and the other in local file storage as JSON.
+                    </p>
+                </div>
+                <div class="TagLine TagLine4">
+                    <h2>Mirrored Storage By default</h2>
+                    <p>
+                        we strongly recommend using the ZFS file system with at least a RAID Mirrored configuration,
+                        there's still a risk of data loss. To mitigate this, we've
+                        implemented a dual storage system: one in a MySQL database and the other in local file storage
+                        as JSON. Don't
+                        worry, we don't store passwords or names directly.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+        <div class="block block3">
+            <div class="TextArea">
+                <div class="Text">
+                    <h2>Community driven Roadmap</h2><br>
+                    <p>
+                        Discover the next major milestones for OpenPassMen You can vote for new ideas and change
+                        requests in the community forum.
+                    </p><br><br>
+                    <a target="_blank" href="https://github.com/SombitPramanik/PassMen">Explore on Github</a>
+                    <br>
+                    <div class="Stats">
+                        <div class="left">
+                            <div class="StatsHade">Backlog</div>
+                            <div class="StatsBody">
+                                <ul>
+                                    <li>Advance PWA</li>
+                                    <li>Native Android APP</li>
+                                    <li>Password Autofill (APP)</li>
+                                    <li>Native ZFS</li>
+                                    <li>Support For Team</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="mid">
+                            <div class="StatsHade">in Progress</div>
+                            <div class="StatsBody">
+                                <ul>
+                                    <li>Password Autofill (WEB)</li>
+                                    <li>Chrome Extension</li>
+                                    <li>Push Notification</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="StatsHade">Completed</div>
+                            <div class="StatsBody">
+                                <ul>
+                                    <li>Basic PWA</li>
+                                    <li>Backend & Frontend Encryption</li>
+                                    <li>TPN Base Login</li>
+                                    <li>Profile Management</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="Area">
+
+                </div>
+            </div>
+
+        </div>
+        <div class="block block4" id="install">
+            <div class="installerHed">
+                <h2>Support on any OS that able to run <span style="color: red;"> Docker</span> Engine</h2>
+                <br>
+                <ul>
+                    <li>Requirements : Docker,Docker Compose,and other Docker Dependencies</li>
+                    <li>Default Password : OpenP@ssM0n</li>
+                    <li>Default User : OpenPassMen</li>
+                    <li>Default Port : 7443</li>
+                    <li>Default Security : SSL</li>
+                    <li>Default Storage : Mirrored [DB,LocalCopy]</li>
+                    <li>Default Run Command : sudo docker compose up -d</li>
+                </ul>
+            </div>
+            <div class="installerBody docker-compose">
+                <div class="ComposeHead">
+                    <div id="CopyBtn">Copy</div>
+                </div>
+                <div class="ComposeBody">
+                    <pre>
+Launching Soon ......
+                    </pre>
+                </div>
+            </div>
+        </div>
+        <div class="block">
+            <div class="securityPera">
+            <h2>Z Security at your Own Infrastructure</h2>
+            <p>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </p>
+            </div>
+            <div class="dfdImage"></div>
+        </div>
+        <div class="block"></div>
+        <div id="Documentation" class="block">doc</div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+    </div>
+    <div class="DownloadSection">
+        <a href="#SelfHost">
+            <img src="static/icons/server.svg" alt="SelfHost">
+            Host on Your Own Infrastructure <br> Checkout How
+        </a>
+    </div>
+    <div class="BillBoard">
+        <div class="ImageSlider"></div>
+        <div class="ImageSlideTagLine">
+
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    function setBackgroundImage(elementId, imageUrl) {
+        // Check if the service worker's cache contains the image
+        if ('caches' in window) {
+            caches.match(imageUrl).then(function (response) {
+                if (response) {
+                    // If image is found in the cache, set the background using the cached image
+                    applyBackgroundImage(elementId, imageUrl);
+                } else {
+                    // If image is not in the cache, fetch it from the server
+                    fetch(imageUrl).then(function (response) {
+                        if (response.ok) {
+                            // Cache the image after fetching it from the server
+                            caches.open('dynamic-cache-v1').then(function (cache) {
+                                cache.put(imageUrl, response.clone());
+                            });
+                            // Set the background using the fetched image
+                            applyBackgroundImage(elementId, imageUrl);
+                        } else {
+                            console.error('Image fetch failed:', imageUrl);
+                        }
+                    }).catch(function (error) {
+                        console.error('Error fetching the image:', error);
+                    });
+                }
+            }).catch(function (error) {
+                console.error('Error accessing cache:', error);
+            });
+        } else {
+            // If caches API is not supported, fallback to fetching the image from the server
+            applyBackgroundImage(elementId, imageUrl);
+        }
+    }
+
+    function applyBackgroundImage(elementId, imageUrl) {
+        var element = document.getElementById(elementId);
+        if (element) {
+            element.style.backgroundImage = 'url(' + imageUrl + ')';
+            element.style.backgroundSize = 'cover';  // Ensures the image covers the entire area
+            element.style.backgroundPosition = 'center';  // Centers the image
+        } else {
+            console.error('Element with id "' + elementId + '" not found.');
+        }
+    }
+
+</script>
+<script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function () {
+            navigator.serviceWorker.register('/static/js/service-worker.js').then(function (registration) {
+                console.log('ServiceWorker registration successful with scope: ', registration.scope);
+            }, function (err) {
+                console.log('ServiceWorker registration failed: ', err);
+            });
+        });
+    }
+
+</script>
+{% endblock %}
