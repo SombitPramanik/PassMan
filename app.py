@@ -16,4 +16,4 @@ def index():
 
 if __name__ == '__main__':
     # app.run(debug=True,ssl_context='adhoc')  # Enables HTTPS for development  and force to obtain self sign SSL
-    app.run(debug=True)
+    app.run(debug=True,host='0.0.0.0')
